@@ -15,7 +15,7 @@ function ItunesController() {
     var id = 1
     for (var i = 0; i < artist.length; i++) {
       var item = artist[i]
-      if (count <= 3) {
+      if (count <= 2) {
         rowTemplate += `
             <div class="col-xs-12 col-md-4">
               <div class="card thumbnail">
@@ -32,13 +32,28 @@ function ItunesController() {
             </div>
           `
         count++
-        id++
       }
       else {
+        rowTemplate += `
+            <div class="col-xs-12 col-md-4">
+              <div class="card thumbnail">
+                <img src="${item.albumArt}" alt="albumArt">
+                <div class="card-body">
+                  <h4>${item.title}</h4>
+                  <h4>${item.artist}</h4>
+                  <h5>${item.collection}</h5>
+                  <p>$${item.price}</p>
+                  <audio controls class="audio-controls" id="${id}">
+                    <source src="${item.preview}" type="audio/mp4" />
+                </div>
+              </div>
+            </div>
+          `
         count = 1
         template += rowTemplate + '</div>'
         rowTemplate = '<div class="row">'
       }
+      id++
     }
     document.getElementById('songs').innerHTML = template
 
