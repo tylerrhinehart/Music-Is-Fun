@@ -12,11 +12,19 @@
 </head>
 
 <body>
+    <div class="header">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Music Is Fun!</h1>
+            </div>
+        </div>
+    </div>
     <div class="container">
+        <button type="button" onclick="app.controllers.itunesCtrl.test()">Test</button>
         <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
             <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
             <div class="form-group">
-                <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                <input type="text" class="form-control" name="artist" placeholder="Search for Music" />
                 <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
             </div>
         </form>

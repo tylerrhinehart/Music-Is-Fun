@@ -4,15 +4,30 @@ img {
 }
 
 body {
-  background-color: lightblue;
+  background-image: url("https://images.pexels.com/photos/167092/pexels-photo-167092.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
 }
 
 .card {
-  text-align: center;
-  min-height: 40vh;
-  padding: 2rem;
+  background-image: url("https://images.pexels.com/photos/41498/pexels-photo-41498.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .audio-controls {
   max-width: 90%;
+}
+
+#songs {
+  margin-top: 10vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.header {
+  margin-bottom: 3vh;
 }
