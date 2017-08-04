@@ -17,7 +17,7 @@ function ItunesController() {
       var item = artist[i]
       if (count <= 3) {
         rowTemplate += `
-        <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 col-md-4">
               <div class="card thumbnail">
                 <img src="${item.albumArt}" alt="albumArt">
                 <div class="card-body">
@@ -29,7 +29,7 @@ function ItunesController() {
                     <source src="${item.preview}" type="audio/mp4" />
                 </div>
               </div>
-          </div>
+            </div>
           `
         count++
         id++
