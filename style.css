@@ -37,7 +37,16 @@ h1 {
   font-size: 6rem;
 }
 
-input[type=text] {
+#search-input {
   background-color: rgba(200, 200, 200, 0.1);
   text-align: center;
+}
+
+.overflow {
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: auto;
+  margin-right: auto;
 }

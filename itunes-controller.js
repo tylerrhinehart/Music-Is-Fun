@@ -18,7 +18,7 @@ function ItunesController() {
       if (count <= 2) {
         rowTemplate += `
             <div class="col-xs-12 col-md-4">
-              <div class="card thumbnail">
+              <div class="card thumbnail overflow">
                 <img src="${item.albumArt}" alt="albumArt">
                 <div class="card-body">
                   <h4>${item.title}</h4>
@@ -36,7 +36,7 @@ function ItunesController() {
       else {
         rowTemplate += `
             <div class="col-xs-12 col-md-4">
-              <div class="card thumbnail">
+              <div class="card thumbnail overflow">
                 <img src="${item.albumArt}" alt="albumArt">
                 <div class="card-body">
                   <h4>${item.title}</h4>
@@ -60,7 +60,6 @@ function ItunesController() {
   }
 
   document.addEventListener('play', function (e) {
-    console.log(e)
     var players = document.getElementsByClassName('audio-controls')
     for (var i = 0; i < players.length; i++) {
       if (players[i] != e.target) {
