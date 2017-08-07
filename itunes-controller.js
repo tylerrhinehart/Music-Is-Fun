@@ -21,7 +21,7 @@ function ItunesController() {
               <div class="card thumbnail overflow">
                 <img src="${item.albumArt}" alt="albumArt">
                 <div class="card-body">
-                  <h4>${item.title}</h4>
+                  <h4 class="title" onclick="app.controllers.itunesCtrl.titlePlay(${id})">${item.title}</h4>
                   <h4>${item.artist}</h4>
                   <h5>${item.collection}</h5>
                   <p>$${item.price}</p>
@@ -39,7 +39,7 @@ function ItunesController() {
               <div class="card thumbnail overflow">
                 <img src="${item.albumArt}" alt="albumArt">
                 <div class="card-body">
-                  <h4>${item.title}</h4>
+                  <h4 class="title" onclick="app.controllers.itunesCtrl.titlePlay(${id})">${item.title}</h4>
                   <h4>${item.artist}</h4>
                   <h5>${item.collection}</h5>
                   <p>$${item.price}</p>
@@ -66,6 +66,12 @@ function ItunesController() {
         players[i].pause()
       }
     }
-  }, true);
+  }, true)
+
+  this.titlePlay = function (id) {
+    var player = document.getElementById(id)
+    player.play()
+  }
+
 
 }
